@@ -1,0 +1,37 @@
+---
+name: 'readme-scholar-activity'
+author: 'khengyun'
+description: 'A GitHub Action to update your README with your latest Google Scholar activity.'
+inputs:
+  SCHOLAR_ID:  
+    description: 'Google Scholar user ID'
+    required: true
+    default: 'YpOO60MAAAAJ'
+  GH_USERNAME:
+    description: 'GitHub username'
+    required: false
+    default: 'khengyun'
+  COMMIT_NAME:
+    description: 'Name of the committer'
+    required: false
+    default: "github-actions[bot]"
+  COMMIT_EMAIL:
+    description: 'Email of the committer'
+    required: false
+    default: "41898282+github-actions[bot]@users.noreply.github.com"
+  LIMIT:
+    description: 'Number of results to return'
+    required: false
+    default: 5
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    SCHOLAR_ID: ${{ inputs.SCHOLAR_ID }}
+    COMMIT_NAME: ${{ inputs.COMMIT_NAME }}
+    COMMIT_EMAIL: ${{ inputs.COMMIT_EMAIL }}
+    GH_USERNAME: ${{ inputs.GH_USERNAME }}
+    LIMIT: ${{ inputs.LIMIT }}
+branding:
+  icon: 'check-square'
+  color: 'white'

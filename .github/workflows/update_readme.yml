@@ -1,0 +1,22 @@
+name: update scholar activity
+
+on: 
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  update_scholar_readme:
+    runs-on: ubuntu-latest
+    name: Update Scholar README
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: update readme
+        id: update_readme
+        uses: khengyun/readme-scholar-activity@main
+        with:
+          SCHOLAR_ID: 'YpOO60MAAAAJ'
