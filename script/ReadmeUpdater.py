@@ -21,7 +21,7 @@ class ReadmeUpdater:
         return current_datetime.strftime("%Y-%m-%d %H:%M:%S %Z")
 
     def generate_html_content(self, papers_data, current_date_time_str):
-        html_content = f"## 🧑‍🏫 Top {len(papers_data["papers"])} Publications"
+        html_content = f'## 🧑‍🏫 Top {len(papers_data["papers"])} Publications'
         html_content = "\n\n<table id=\"scholar-table\" style=\"position: relative;\">\n"
         html_content += "  <tr>\n"
         html_content += "    <th>Title</th>\n"
