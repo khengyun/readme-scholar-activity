@@ -43,6 +43,7 @@ jobs:
 
 
 - `SCHOLAR_ID` (required): Your Google Scholar user ID.
+- `LIMIT` : Declare the number of research will be show off
 
 ![](./img/guess.png)
 
