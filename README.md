@@ -34,6 +34,7 @@ jobs:
         uses: khengyun/readme-scholar-activity@main
         with:
           SCHOLAR_ID: 'YpOO60MAAAAJ' # change to your SCHOLAR ID 
+          LIMIT: 5 # limit the number of research 
       - uses: EndBug/add-and-commit@v9
         with:
           default_author: github_actions
