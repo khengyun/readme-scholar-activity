@@ -43,7 +43,7 @@ jobs:
 
 - `SCHOLAR_ID` (required): Your Google Scholar user ID.
 
-![](img\guess.png)
+![](./img/guess.png)
 
 ## Example Workflow:
 
