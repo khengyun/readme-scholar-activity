@@ -18,7 +18,7 @@ def list_tree(path='.'):
 
 
 if __name__ == "__main__":
-    list_tree()
+    # list_tree()
     # os.chdir("/action/workspace/")
     GH_USERNAME = os.environ.get("GH_USERNAME")
     SCHOLAR_ID = os.environ.get("SCHOLAR_ID")
