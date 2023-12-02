@@ -2,7 +2,7 @@ FROM python:3.12-slim
 
 
 WORKDIR /action/workspace
-COPY requirements.txt script/*.py main.sh /action/workspace/
+COPY requirements.txt script/*.py  /action/workspace/
 
 
 RUN python3 -m pip install --no-cache-dir -r requirements.txt \
