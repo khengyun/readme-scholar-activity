@@ -70,31 +70,6 @@ class ReadmeUpdater:
         print("Changes written to README file.")
 
         self.show_current_github_repo_info()
-        # self.commit_file()
-
-    def commit_file(self):
-        print("Committing changes...")
-        print(f"Git Email: {self.commit_email}")
-        print(f"Git Name: {self.commit_name}")
-        print(f"Target File: {self.target_file}")
-        
-        # Set Git configurations for this repository
-        self.execute_command("git", ["config", "--global", "user.email", self.commit_email])
-        self.execute_command("git", ["config", "--global", "user.name", self.commit_name])
-
-        # Add the recommended configuration to address dubious ownership
-        self.execute_command("git", ["config", "--add", "safe.directory", "/action/workspace"])
-
-        # print("Adding changes to Git...")
-        self.execute_command("git", ["add", self.target_file])
-        
-        # print("Committing changes...")
-        self.execute_command("git", ["commit", "-m", self.commit_msg])
-        
-        # print("Pushing changes...")
-        self.execute_command("git", ["push", "-u", "origin", "main"])
-
-        print("Changes config successfully.")
 
     def get_current_github_repo_info(self):
         """
