@@ -1,5 +1,4 @@
 requests
 beautifulsoup4
-fastapi
-uvicorn
 GitPython
+scholarly
